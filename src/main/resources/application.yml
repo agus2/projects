@@ -1,0 +1,17 @@
+
+#RabbitMQ properties
+spring:
+  rabbitmq:
+    dynamic: true
+    host: localhost
+    port: 5672
+    addresses: localhost:5672
+    username: agus
+    password: agus
+    virtual-host: /
+
+sample:
+  rabbitmq:
+    queue: mycola
+    exchange: myexchange
+    routingkey: myrouting
