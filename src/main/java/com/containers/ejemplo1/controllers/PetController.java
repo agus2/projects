@@ -27,8 +27,8 @@ public class PetController implements IPetController{
     }
 
     @Override
-    public ResponseEntity<Void> delete(Pet pet) {
-        service.delete(pet);
+    public ResponseEntity<Void> delete(String id) {
+        service.delete(id);
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 }

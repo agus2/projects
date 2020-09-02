@@ -8,5 +8,5 @@ public interface IPetService {
      void add(Pet pet);
      List<Pet> getAll();
      void update(Pet pet);
-     void delete(Pet pet);
+     void delete(String id);
 }

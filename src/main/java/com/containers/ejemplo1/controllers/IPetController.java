@@ -1,6 +1,7 @@
 package com.containers.ejemplo1.controllers;
 
 import com.containers.ejemplo1.repository.models.Pet;
+import lombok.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,5 +15,5 @@ public interface IPetController {
     @GetMapping("/list")
     ResponseEntity<List<Pet>> list();
     @DeleteMapping("/delete")
-    ResponseEntity<Void> delete(@RequestBody Pet pet);
+    ResponseEntity<Void> delete(@RequestParam(value="id") String id);// http://localhost:8081/delete?id=3
 }

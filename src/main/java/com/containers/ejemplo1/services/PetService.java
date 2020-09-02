@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PetService implements IPetService {
@@ -31,7 +32,9 @@ public class PetService implements IPetService {
     }
 
     @Override
-    public void delete(Pet pet) {
-        repo.delete(pet);
+    public void delete(String id_pet) {
+       int id = Integer.parseInt(id_pet);
+        //repo.findById(id);
+        repo.deleteById(id);
     }
 }

@@ -17,3 +17,16 @@ services:
     restart: always
     ports:
       - 8080:8080
+  sonarqube:
+    image: sonarqube
+    ports:
+      - "9000:9000"
+    environment:
+      - sonar.jdbc.username=agus
+      - sonar.jdbc.password=agus
+      - sonar.jdbc.url=jdbc:postgresql://db:5432/agus_database
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+
